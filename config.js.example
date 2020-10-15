@@ -7,7 +7,7 @@ module.exports = {
 			nights:     "5",
 			parks: [
                                 // {id:'1200052', name:'Bastrop State Park'},                                                          
-				// {id:'1200054', name:'Buescher State Park'},                                                         
+				   {id:'1200054', name:'Buescher State Park'},                                                         
 				// {id:'1200080', name:'Martin Dies Jr. State Park'},                                                  
 				// {id:'1200079', name:'Lake Somerville State Park Nails Creek'},                                      
 				// {id:'1200078', name:'Lake Somerville State Park Birch Creek'},                                      
@@ -18,13 +18,14 @@ module.exports = {
 				// {id:'1200085', name:'Stephen F. Austin State Park'},                                                
 				// {id:'1200072', name:'Brazos Bend State Park'}, 
 			],
-		    	mail_to:   'Evan Platt, evplatt@gmail.com'
+		    	mail_to:   'John Doe, johndoe@gmail.com'
 		},
 	],
 
-	sendinblue_user: 'evplatt@gmail.com',
-	sendinblue_api_key: 'O6EUWfB0xtHYwFC2',
-	mail_from: 'evplatt@gmail.com',
+	sendinblue_user: 'SENDINBLUE_USERNAME',
+	sendinblue_api_key: 'SENDINBLUE_API_KEY',
+	mail_from: 'from@somesite.com',
 	
 
 }
+
