@@ -6,7 +6,7 @@ Prerequisites:
   * git
 
 Installation:
-  * git clone https://github.com/evplatt/campsite_watcher)
+  * git clone https://github.com/evplatt/campsite_watcher
   * cd campsite_watcher
   * npm install
   * cp config.js.example config.js
