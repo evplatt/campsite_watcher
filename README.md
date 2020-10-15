@@ -11,4 +11,5 @@ Installation:
   * `npm install`
   * `cp config.js.example config.js`
   * edit config.js - replace generic items with real values
+  * `./index.js` to test
   * add .../campsite_watcher/index.js to your crontab to set up automatic checks
