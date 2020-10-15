@@ -1,5 +1,14 @@
 # campsite_watcher
 
-Be sure to copy config.js.example to config.js and fill in generic values
+Prerequisites:
+  * nodejs
+  * npm
+  * git
 
-Add this to your crontab to set up automatic checks
+Installation:
+  * git clone https://github.com/evplatt/campsite_watcher)
+  * cd campsite_watcher
+  * npm install
+  * cp config.js.example config.js
+  * edit config.js - replace generic items with real values
+  * add .../campsite_watcher/index.js to your crontab to set up automatic checks
