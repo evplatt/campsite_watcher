@@ -103,13 +103,14 @@ fs.exists('results.json', function(exists){
 			//If one or more sites available, then parse out and list the site types
 			if (numsites != '0'){
 	
-				const types = await page.$$('.filters a');
+				const types = await page.$$('.site_type_item_redesigned a');
 				var typearr = [];
 				for (var j = 0; j < types.length; j++) {
  						const typetext = await (await types[j].getProperty('innerText')).jsonValue();
- 						typearr.push(typetext);
+                        if (!typetext.match(/\(0\)/)) typearr.push(typetext);
 				}
-				var uniqueTypes = Array.from(new Set(typearr))
+				
+                var uniqueTypes = Array.from(new Set(typearr))
 				console.log("\t"+uniqueTypes.join(","));
 				output += ">>> "+uniqueTypes.join(",")+"\n";
 			}
@@ -149,13 +150,7 @@ function check_for_changes(searchnum){
 
                 console.log("Change detected");
 
-                var client = nodemailer.createTransport({
-                        service: 'SendinBlue',
-                        auth: {
-                              user: config.sendinblue_user,
-                              pass: config.sendinblue_api_key
-        	        }
-                });
+                var client = nodemailer.createTransport({sendmail: true});
 
                 var now = new Date();
                 var ts = now.toISOString();
